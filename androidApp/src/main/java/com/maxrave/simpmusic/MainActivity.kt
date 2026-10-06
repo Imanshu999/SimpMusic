@@ -86,8 +86,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        if (shouldUnbind) {
-            unbindService(serviceConnection)
+        if (shouldUnbind && mBound) {
+            runCatching { unbindService(serviceConnection) }
+            mBound = false
+            shouldUnbind = false
         }
     }
 
