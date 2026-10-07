@@ -766,7 +766,7 @@ fun App(
                                 onClick = {
                                     shouldShowUpdateDialog = false
                                     viewModel.showedUpdateDialog = false
-                                    openUrl("https://simpmusic.org/download")
+                                    openUrl("https://github.com/Imanshu999/SQLplayer/releases")
                                 },
                             ) {
                                 Text(
